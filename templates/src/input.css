@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "DanaFaNumThin";
+    src: url(../src/fonts/DanaFaNum-Thin.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "DanaFaNumRegular";
+    src: url(../src/fonts/DanaFaNum-Regular.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "DanaFaNumMedium";
+    src: url(../src/fonts/DanaFaNum-Medium.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "DanaFaNumDemiBold";
+    src: url(../src/fonts/DanaFaNum-DemiBold.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "DanaFaNumBold";
+    src: url(../src/fonts/DanaFaNum-Bold.woff2) format(woff2);
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "DanaFaNumBlack";
+    src: url(../src/fonts/DanaFaNum-Black.woff2) format(woff2);
+    font-display: swap;
+  }
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    font-family: 'DanaFaNumMedium';
+    
+  }
+}
