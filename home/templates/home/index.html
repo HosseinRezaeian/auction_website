@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
     <title>Document</title>
   </head>
   <body dir="rtl" class="bg-[#F8F8F8]">
@@ -62,7 +63,7 @@
       <div class="mx-28 w-full flex justify-between">
         <div class="flex items-center gap-x-5">
           <div class="border-l pl-5">
-            <img src="../src/assets/logo.png" alt="" />
+            <img src="../../../templates/src/assets/logo.png" alt="" />
           </div>
           <div>
             <span>دسته بندی ها</span>
@@ -76,7 +77,7 @@
           </div>
           <div>
             <a
-              href="../dist/post.html"
+              href="../../../templates/dist/post.html"
               class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
               >مجله</a
             >
@@ -87,7 +88,7 @@
             >
           </div>
           <div>
-            <a href="Login.html" class="bg-black w-10 h-8">
+            <a href="../../../templates/dist/Login.html" class="bg-black w-10 h-8">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -116,10 +117,10 @@
           <div class="">
             <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
               <div class="flex px-5 py-5 h-full">
-                <a href="post.html"
+                <a href="../../../templates/dist/post.html"
                   class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
                 >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
+                  <img src="../../../templates/src/assets/logo1.jpg" alt="" class="w-12" />
                   <span class="font-DanaFaNumThin text-xs leading-6"
                     >شرکت هتل پارسیان آزادی</span
                   >
@@ -133,7 +134,7 @@
                   </div>
                 </a>
                 <div class="flex flex-col justify-between px-3">
-                  <a href="post.html" class="h-10">
+                  <a href="../../../templates/dist/post.html" class="h-10">
                     <h4 class="font-DanaFaNumRegular tracking-tight">
                       مزایده کلیه تجهیزات الکترونیک
                     </h4>
@@ -166,431 +167,7 @@
               </div>
             </div>
           </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo2.jpg" alt="" class="w-12" />
-                  <span
-                    class="font-DanaFaNumThin text-xs leading-6 w-28 line-clamp-2"
-                    >شرکت شیر و گوشت زاگرس شهرکرد سهامی عام</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/24</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده فروش دام
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >چهارمحال بختیاری / شهرکرد</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >دامپروری و دامداری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت شیر و گوشت زاگرس شهر کرد (سهامی عام) در نظر دارد دام
-                      های به صورت فروش انتقالی خاص به
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="">
-            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
-              <div class="flex px-5 py-5 h-full">
-                <div
-                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
-                >
-                  <img src="../src/assets/logo1.jpg" alt="" class="w-12" />
-                  <span class="font-DanaFaNumThin text-xs leading-6"
-                    >شرکت هتل پارسیان آزادی</span
-                  >
-                  <div
-                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
-                  >
-                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
-                      مهلت شرکت
-                    </p>
-                    <p class="text-sm">1403/01/27</p>
-                  </div>
-                </div>
-                <div class="flex flex-col justify-between px-3">
-                  <div class="h-10">
-                    <h4 class="font-DanaFaNumRegular tracking-tight">
-                      مزایده کلیه تجهیزات الکترونیک
-                    </h4>
-                  </div>
-                  <div class="flex flex-col space-y-3">
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#location"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >تهران/تهران</span
-                      >
-                    </div>
-                    <div class="flex">
-                      <svg class="w-4 h-4 ml-3">
-                        <use href="#briefcase"></use>
-                      </svg>
-                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
-                        >املاک تجاری</span
-                      >
-                    </div>
-                  </div>
-                  <div class="">
-                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
-                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
-                      پارسیان با استناد به مجوز صادره
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
 
@@ -604,7 +181,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony1.jpg"
+                src="../../../templates/src/assets/compony1.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />
@@ -619,7 +196,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony3.jpg"
+                src="../../../templates/src/assets/compony3.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />
@@ -634,7 +211,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony2.jpg"
+                src="../../../templates/src/assets/compony2.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />
@@ -649,7 +226,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony2.jpg"
+                src="../../../templates/src/assets/compony2.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />
@@ -664,7 +241,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony2.jpg"
+                src="../../../templates/src/assets/compony2.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />
@@ -679,7 +256,7 @@
           >
             <div>
               <img
-                src="../src/assets/compony2.jpg"
+                src="../../../templates/src/assets/compony2.jpg"
                 alt=""
                 class="w-16 h-16 rounded-2xl"
               />

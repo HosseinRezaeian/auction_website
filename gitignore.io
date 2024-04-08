@@ -96,7 +96,7 @@ fabric.properties
 .idea/misc.xml
 .idea/Auction.iml
 # *.ipr
-
+*/__pycache__
 # Sonarlint plugin
 # https://plugins.jetbrains.com/plugin/7973-sonarlint
 .idea/**/sonarlint/
