@@ -93,7 +93,8 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml
+.idea/misc.xml
+.idea/Auction.iml
 # *.ipr
 
 # Sonarlint plugin
@@ -121,3 +122,4 @@ fabric.properties
 # Azure Toolkit for IntelliJ plugin
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
+db.sqlite3
