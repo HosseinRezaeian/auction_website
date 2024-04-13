@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import home
+from .views import HomeView
 
 urlpatterns = [
-    path('', home, name='homepage'),
+    path('', HomeView.as_view(), name='homepage'),
 ]
