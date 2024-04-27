@@ -5,7 +5,7 @@ from .models import ProductOrService
 
 # Create your views here.
 class ProductView(View):
-    def get(self, request, product_id, *args, **kwargs):
-        product = ProductOrService.objects.get(id=product_id)
+    def get(self, request, slug, *args, **kwargs):
+        product = ProductOrService.objects.get(slug=slug)
         content = {'product': product}
         return render(request, 'products/post.html', content)
