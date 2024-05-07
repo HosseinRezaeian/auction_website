@@ -1,0 +1,169 @@
+{% extends 'home/index.html' %}
+
+{% block index %}
+      <div class="mt-10 mr-32">
+        <h3>آگهی های تازه مزایده</h3>
+      </div>
+
+    {% for product in products %}
+      <div class="grid justify-center mt-10 mb-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="">
+            <div class="w-[26rem] h-60 bg-white shadow-sm rounded-2xl">
+              <div class="flex px-5 py-5 h-full">
+                <a href="../../../templates/dist/post.html"
+                  class="flex flex-col justify-between border-l pl-5 w-28 items-center text-center"
+                >
+                  <img src="../../../templates/src/assets/logo1.jpg" alt="" class="w-12" />
+                  <span class="font-DanaFaNumThin text-xs leading-6"
+                    ></span
+                  >
+                  <div
+                    class="flex flex-col items-center justify-center bg-[#E2F8EF] text-[#32C98B] w-28 h-[70px] rounded-2xl"
+                  >
+                    <p class="text-sm border-b border-black/25 pb-1 mb-1">
+                      مهلت شرکت
+                    </p>
+                    <p class="text-sm">1403/01/27</p>
+                  </div>
+                </a>
+                <div class="flex flex-col justify-between px-3">
+                  <a href="{% url 'product' product.slug %}" class="h-10">
+                    <h4 class="font-DanaFaNumRegular tracking-tight">
+                        {{ product.title }}
+                    </h4>
+                  </a>
+                  <div class="flex flex-col space-y-3">
+                    <div class="flex">
+                      <svg class="w-4 h-4 ml-3">
+                        <use href="#location"></use>
+                      </svg>
+                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
+                        >تهران/تهران</span
+                      >
+                    </div>
+                    <div class="flex">
+                      <svg class="w-4 h-4 ml-3">
+                        <use href="#briefcase"></use>
+                      </svg>
+                      <span class="text-zinc-400 text-sm font-DanaFaNumRegular"
+                        >املاک تجاری</span
+                      >
+                    </div>
+                  </div>
+                  <div class="">
+                    <p class="text-xs text-zinc-600/80 leading-6 line-clamp-2">
+                      شرکت هتل پارسیان آزادی وابسته به شرکت هتل‌های بین‌المللی
+                      پارسیان با استناد به مجوز صادره
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    {% endfor %}
+
+
+
+            <div class="bg-white h-96 grid justify-center items-center pt-12">
+        <div class="">
+          <h4>شـرکت هـای مـرتبط بــا آگهی های مزایده</h4>
+        </div>
+        <div class="grid grid-cols-3 gap-5">
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony1.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>شرکت کشت و صنعت زرین خوشه اراک</h4>
+              <p class="text-zinc-400 text-sm">خوشه / کشت</p>
+            </div>
+          </div>
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony3.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>شرکت کشت و صنعت و دامپروری پگاه همدان</h4>
+              <p class="text-zinc-400 text-sm">دامپروری / لبنیات</p>
+            </div>
+          </div>
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony2.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>سیمان خزر</h4>
+              <p class="text-zinc-400 text-sm">سیمان / سیمان</p>
+            </div>
+          </div>
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony2.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>سیمان خزر</h4>
+              <p class="text-zinc-400 text-sm">سیمان / سیمان</p>
+            </div>
+          </div>
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony2.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>سیمان خزر</h4>
+              <p class="text-zinc-400 text-sm">سیمان / سیمان</p>
+            </div>
+          </div>
+          <div
+            class="w-[416px] h-24 bg-gray-200/50 flex items-center rounded-2xl shadow-sm p-2"
+          >
+            <div>
+              <img
+                src="../../../templates/src/assets/compony2.jpg"
+                alt=""
+                class="w-16 h-16 rounded-2xl"
+              />
+            </div>
+            <div class="flex flex-col justify-between gap-y-4 px-3">
+              <h4>سیمان خزر</h4>
+              <p class="text-zinc-400 text-sm">سیمان / سیمان</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

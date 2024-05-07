@@ -1,0 +1,134 @@
+{% extends 'home/index.html' %}
+
+    <!-- section -->
+{% block index %}
+    <div class="w-full">
+      <div class="flex mt-11">
+        <div class="mr-28 ml-8">
+          <div class="flex w-[522px] h-64 bg-white rounded-xl shadow-sm">
+            <div class="p-4">
+              <div class="flex">
+                <div class="pl-5">
+                  <img src="../src/assets/logo1.jpg" alt="" class="w-14 h-14" />
+                </div>
+                <div class="flex flex-col gap-y-4">
+                  <h4 class="text-zinc-500 font-DanaFaNumRegular">
+                    شرکت کشت و صنعت و دامپروری پگاه همدان
+                  </h4>
+                  <span
+                    class="px-4 py-1 bg-gray-200 text-zinc-600 rounded-lg max-w-fit font-DanaFaNumRegular"
+                    >پنجشنبه : 1403/01/16</span
+                  >
+                </div>
+              </div>
+              <hr class="my-5 w-[110%]" />
+              <div>
+                <div>
+                  <h3>
+{{ product.title }}
+                  </h3>
+                </div>
+                <div class="mt-8 space-y-2">
+                  <div class="flex">
+                    <svg class="w-5 h-5 ml-3">
+                      <use href="#location"></use>
+                    </svg>
+                    <span class="text-base font-DanaFaNumRegular"
+                      >همدان / همدان</span
+                    >
+                  </div>
+                  <div class="flex">
+                    <svg class="w-5 h-5 ml-3">
+                      <use href="#briefcase"></use>
+                    </svg>
+                    <span class="text-base font-DanaFaNumRegular">
+                      ماشین آلات راهسازی</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-8 w-[522px] h-24 bg-green-100/40 rounded-xl shadow-sm">
+            <div class="flex justify-between items-center mx-12 h-full">
+              <div class="flex flex-col items-center space-y-4">
+                <h4 class="text-xl">07</h4>
+                <span class="text-teal-800">روز</span>
+              </div>
+              <div class="flex flex-col items-center space-y-4">
+                <h4 class="text-xl">05</h4>
+                <span class="text-teal-800">ساعت</span>
+              </div>
+              <div class="flex flex-col items-center space-y-4">
+                <h4 class="text-xl">13</h4>
+                <span class="text-teal-800">دقیقه</span>
+              </div>
+              <div class="flex flex-col items-center space-y-4">
+                <h4 class="text-xl">12</h4>
+                <span class="text-teal-800">ثانیه</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[522px] h-32 border border-green-300 rounded-xl shadow-sm flex flex-col justify-between bg-green-600/30 mt-8 px-3 py-5"
+          >
+            <div class="">
+              <h4 class="text-sm text-green-800 font-DanaFaNumRegular">
+                آیا مایل به دریافت اطلاعیه آگهی های مشابه به صورت ایمیل و یا
+                پیامک هستید ؟
+              </h4>
+            </div>
+            <div>
+              <a
+                href=""
+                class="px-3 py-2 bg-green-700 text-white text-sm font-DanaFaNumRegular rounded-2xl"
+                >دریافت اشتراک</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-[750px] h-[500px] bg-gray-200/50 rounded-xl shadow-sm flex"
+        >
+          <div class="p-4">
+            <div class="flex flex-col w-[540px]">
+              <div><h4>تـوضیــحات :</h4></div>
+              <div class="mt-2">
+                <p
+                  class="leading-8 font-DanaFaNumRegular tracking-wide text-justify"
+                >
+{{ product.description }}
+                </p>
+              </div>
+              <div class="flex flex-col gap-y-3 mt-7 font-DanaFaNumRegular">
+                <span>آدرس : کرمان</span>
+                <span>آخرین مهلت شرکت : 1403/02/04 12:00:00 </span>
+                <div class="flex items-center">
+                  <span class="ml-2">ارسال برای دیگران :</span>
+                  <svg class="w-5 h-5"><use href="#telegram"></use></svg>
+                  <svg class="w-6 h-6"><use href="#whatsapp"></use></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <div>
+              <h4>پیوست ها :</h4>
+              <div
+                class="bg-red-200 border border-red-400 w-40 rounded-2xl shadow-sm mt-2"
+              >
+                <div class="p-2">
+                  <span class="text-xs font-DanaFaNumRegular"
+                    >برای مشاهده پیوست ها ( تصویر آگهی، اسناد و ... )
+                    <span class="text-blue-600">وارد اشتراک</span>
+                    خود شوید.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
