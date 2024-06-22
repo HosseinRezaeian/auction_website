@@ -4,9 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <title>Document</title>
   </head>
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+  
+
+    .swiper-slide {
+      text-align: center;
+      width: 300rem;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
   <body dir="rtl" class="bg-gray-100">
     <!-- svg -->
 
@@ -104,65 +144,34 @@
           clip-rule="evenodd"
         />
       </symbol>
+      <symbol
+        id="bullk"
+        viewBox="0 0 25 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18.5283 12.65V16.35C18.5283 19.47 15.6183 22 12.0283 22C8.43832 22 5.52832 19.47 5.52832 16.35V12.65C5.52832 15.77 8.43832 18 12.0283 18C15.6183 18 18.5283 15.77 18.5283 12.65Z"
+          fill="#171717"
+        />
+        <path
+          opacity="0.4"
+          d="M18.5283 7.65002V12.65C18.5283 15.77 15.6183 18 12.0283 18C8.43832 18 5.52832 15.77 5.52832 12.65V7.65002C5.52832 8.56002 5.77832 9.40002 6.21832 10.12C7.28832 11.88 9.48832 13 12.0283 13C14.5683 13 16.7683 11.88 17.8383 10.12C18.2783 9.40002 18.5283 8.56002 18.5283 7.65002Z"
+          fill="#171717"
+        />
+        <path
+          d="M18.5283 7.65C18.5283 8.56 18.2783 9.4 17.8383 10.12C16.7683 11.88 14.5683 13 12.0283 13C9.48832 13 7.28832 11.88 6.21832 10.12C5.77832 9.4 5.52832 8.56 5.52832 7.65C5.52832 4.53 8.43832 2 12.0283 2C13.8283 2 15.4483 2.63 16.6283 3.65C17.7983 4.68 18.5283 6.09 18.5283 7.65Z"
+          fill="#171717"
+        />
+      </symbol>
     </svg>
-
-    <!-- nav -->
-    <nav class="w-full flex items-center h-20 shadow-sm">
-      <div class="mx-28 w-full flex justify-between">
-        <div class="flex items-center gap-x-5">
-          <a href="index.html" class="border-l pl-5">
-            <img src="../src/assets/logo.png" alt="" />
-          </a>
-          <div>
-            <span>دسته بندی ها</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-x-2">
-          <div>
-            <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >امــروز : 1403/01/15</a
-            >
-          </div>
-          <div>
-            <a
-              href="../dist/post.html"
-              class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >مجله</a
-            >
-          </div>
-          <div>
-            <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >تعرفه و خرید اشتراک</a
-            >
-          </div>
-          <div>
-            <a href="Login.html" class="bg-black w-10 h-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-10 h-8 px-2 rounded-lg bg-black text-white"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
 
     <!-- section -->
 
     <div class="w-full">
       <div class="flex mt-11">
         <div class="mr-28 ml-8">
-          <div class="flex w-[522px] h-64 bg-white rounded-xl shadow-sm">
+          <div class="flex w-[522px] h-72 bg-white rounded-xl shadow-sm">
             <div class="p-4">
               <div class="flex">
                 <div class="pl-5">
@@ -181,7 +190,7 @@
               <hr class="my-5 w-[110%]" />
               <div>
                 <div>
-                  <h3>
+                  <h3 class="font-DanaFaNumMedium">
                     مزایده یک دستگاه فیدر میکسر 15 متر مکعبی پشت تراکتوری ( نوبت
                     1 )
                   </h3>
@@ -203,11 +212,19 @@
                       ماشین آلات راهسازی</span
                     >
                   </div>
+                  <div class="flex">
+                    <svg class="w-5 h-5 ml-3">
+                      <use href="#bullk"></use>
+                    </svg>
+                    <span class="text-base font-DanaFaNumRegular">
+                      شروع قیمت پایه : 2000000</span
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="mt-8 w-[522px] h-24 bg-green-100/40 rounded-xl shadow-sm">
+          <div class="mt-8 w-[522px] h-24 bg-green-100/40 rounded-xl shadow-sm font-DanaFaNumRegular">
             <div class="flex justify-between items-center mx-12 h-full">
               <div class="flex flex-col items-center space-y-4">
                 <h4 class="text-xl">07</h4>
@@ -227,70 +244,98 @@
               </div>
             </div>
           </div>
+          <!-- card action -->
+          <div
+            class="w-[522px] h-32 border border-orange-300 rounded-xl shadow-sm flex flex-col justify-between bg-orange-600/30 mt-8 px-3 py-5"
+          >
+            <div class="">
+              <h4 class="text-sm text-orange-800 font-DanaFaNumRegular">
+                برای شرکت در مزایده ابتدا باید اشتراک تهیه کنید
+              </h4>
+            </div>
+            <div>
+              <a
+                href=""
+                class="px-3 py-2 bg-orange-700 text-white text-sm font-DanaFaNumRegular rounded-2xl"
+                >دریافت اشتراک</a
+              >
+            </div>
+          </div>
           <div
             class="w-[522px] h-32 border border-green-300 rounded-xl shadow-sm flex flex-col justify-between bg-green-600/30 mt-8 px-3 py-5"
           >
             <div class="">
               <h4 class="text-sm text-green-800 font-DanaFaNumRegular">
-                آیا مایل به دریافت اطلاعیه آگهی های مشابه به صورت ایمیل و یا
-                پیامک هستید ؟
+                برای شرکت در مزایده روی لینک زیر کلیک کنید
               </h4>
             </div>
             <div>
               <a
                 href=""
                 class="px-3 py-2 bg-green-700 text-white text-sm font-DanaFaNumRegular rounded-2xl"
-                >دریافت اشتراک</a
+                >شرکت در مزایده</a
               >
             </div>
           </div>
         </div>
-        <div
-          class="w-[750px] h-[500px] bg-gray-200/50 rounded-xl shadow-sm flex"
-        >
-          <div class="p-4">
-            <div class="flex flex-col w-[540px]">
-              <div><h4>تـوضیــحات :</h4></div>
-              <div class="mt-2">
-                <p
-                  class="leading-8 font-DanaFaNumRegular tracking-wide text-justify"
-                >
-                  مزایده ، شرکت کشت و صنعت فتح و نصر کرمان در نظر دارد نسبت به
-                  فروش حدود 200 تن خرمای زاهدی درجه یک محصول سال 1402 نخلستانهای
-                  تحت پوشش خود را از طریق مزایده کتبی عمومی (نوبت دوم) اقدام
-                  نماید لذا متقاضیان خرید می توانند از تاریخ درج آگهی ضمن اخذ
-                  برگ شرایط شرکت در مزایده نوبت دوم از دفتر مرکزی شرکت واقع در
-                  کرمان - خیابان ارتش نبش کوچه 12 واحد فروش پیشنهاد کتبی خود را
-                  در پاکت سربسته ، تاساعت روز سه شنبه مورخ 1403/02/04 تحویل
-                  دبیرخانه شرکت نمایند. زمان برگزاری جلسه مزایده نوبت دوم) ساعت
-                  11 همان روز در دفتر مرکزی شرکت خواهد بود. تلفن تماس
-                  32758002-034
-                </p>
-              </div>
-              <div class="flex flex-col gap-y-3 mt-7 font-DanaFaNumRegular">
-                <span>آدرس : کرمان</span>
-                <span>آخرین مهلت شرکت : 1403/02/04 12:00:00 </span>
-                <div class="flex items-center">
-                  <span class="ml-2">ارسال برای دیگران :</span>
-                  <svg class="w-5 h-5"><use href="#telegram"></use></svg>
-                  <svg class="w-6 h-6"><use href="#whatsapp"></use></svg>
+        <div class="flex flex-col">
+          <!-- slider -->
+          <div class="swiper mySwiper w-[750px] h-[417px] rounded-xl shadow-sm">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="../src/assets/CarImage_638389305739026861_thumb_900_600.webp" class="bg-contain" alt=""></div>
+              <div class="swiper-slide"><img src="../src/assets/CarImage_638510532650909560_thumb_900_600.webp" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <!-- details -->
+          <div
+            class="w-[750px] h-[400px] bg-gray-200/50 rounded-xl shadow-sm flex my-10"
+          >
+            <div class="p-4">
+              <div class="flex flex-col w-[540px]">
+                <div class="font-DanaFaNumRegular"><h4>تـوضیــحات :</h4></div>
+                <div class="mt-2">
+                  <p
+                    class="leading-8 font-DanaFaNumRegular tracking-wide text-justify"
+                  >
+                    مزایده ، شرکت کشت و صنعت فتح و نصر کرمان در نظر دارد نسبت به
+                    فروش حدود 200 تن خرمای زاهدی درجه یک محصول سال 1402
+                    نخلستانهای تحت پوشش خود را از طریق مزایده کتبی عمومی (نوبت
+                    دوم) اقدام نماید لذا متقاضیان خرید می توانند از تاریخ درج
+                    آگهی ضمن اخذ برگ شرایط شرکت در مزایده نوبت دوم از دفتر مرکزی
+                    شرکت واقع در کرمان - خیابان ارتش نبش کوچه 12 واحد فروش
+                    پیشنهاد کتبی خود را در پاکت سربسته ، تاساعت روز سه شنبه مورخ
+                    1403/02/04 تحویل دبیرخانه شرکت نمایند. زمان برگزاری جلسه
+                    مزایده نوبت دوم) ساعت 11 همان روز در دفتر مرکزی شرکت خواهد
+                    بود. تلفن تماس 32758002-034
+                  </p>
+                </div>
+                <div class="flex flex-col gap-y-3 mt-7 font-DanaFaNumRegular">
+                  <span>آدرس : کرمان</span>
+                  <span>آخرین مهلت شرکت : 1403/02/04 12:00:00 </span>
+                  <div class="flex items-center">
+                    <span class="ml-2">ارسال برای دیگران :</span>
+                    <svg class="w-5 h-5"><use href="#telegram"></use></svg>
+                    <svg class="w-6 h-6"><use href="#whatsapp"></use></svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="pt-4">
-            <div>
-              <h4>پیوست ها :</h4>
-              <div
-                class="bg-red-200 border border-red-400 w-40 rounded-2xl shadow-sm mt-2"
-              >
-                <div class="p-2">
-                  <span class="text-xs font-DanaFaNumRegular"
-                    >برای مشاهده پیوست ها ( تصویر آگهی، اسناد و ... )
-                    <span class="text-blue-600">وارد اشتراک</span>
-                    خود شوید.
-                  </span>
+            <div class="pt-4">
+              <div class="font-DanaFaNumRegular">
+                <h4>پیوست ها :</h4>
+                <div
+                  class="bg-red-200 border border-red-400 w-40 rounded-2xl shadow-sm mt-2"
+                >
+                  <div class="p-2">
+                    <span class="text-xs font-DanaFaNumRegular"
+                      >برای مشاهده پیوست ها ( تصویر آگهی، اسناد و ... )
+                      <span class="text-blue-600">وارد اشتراک</span>
+                      خود شوید.
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -299,4 +344,13 @@
       </div>
     </div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </html>
