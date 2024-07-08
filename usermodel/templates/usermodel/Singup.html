@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static "src/output.css" %}"/>
+    <title>Document</title>
+</head>
+<body dir="rtl">
+<div class="w-full h-screen flex flex-col justify-center items-center">
+    <div
+            class="flex flex-col justify-center items-center gap-y-5 w-72 h-[37rem] bg-green-300 shadow-md">
+        <h3 class="pb-5 text-xl">ثبت نام کنید</h3>
+
+        <form method="POST">
+
+            {% for field in form %}
+
+                <div class="flex flex-col items-start">
+                    <span> {{ field.label_tag }} </span>
+                    {{ field }}
+                </div>
+
+            {% endfor %}
+            {% csrf_token %}
+
+
+            <div>
+
+                <button style="margin-top: 5px"  class="px-20 py-1 bg-blue-600 text-white rounded-md" type="submit">ثبت نام</button>
+
+            </div>
+
+        </form>
+        <div class="font-DanaFaNumRegular">
+          <span
+          >حساب دارید؟
+            <a href="{% url 'login' %}" class="text-blue-600">وارد شوید</a></span
+          >
+        </div>
+    </div>
+</div>
+</body>
+</html>

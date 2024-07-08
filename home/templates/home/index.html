@@ -1,117 +1,409 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static "src/output.css" %}"/>
+    <link
+            rel="stylesheet"
+            href="{% static 'jsdelivr.css' %}"
+    />
     <title>Document</title>
-  </head>
-  <body dir="rtl" class="bg-[#F8F8F8]">
-    <!-- ----- svg ----- -->
+</head>
+<body dir="rtl" class="bg-[#F8F8F8]">
+<!-- ----- svg ----- -->
 
-    <svg class="hidden">
-      <symbol
-        id="location"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        class="w-6 h-6"
-      >
+<svg class="hidden">
+    <symbol
+            id="location"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+    >
         <path
-          fill-rule="evenodd"
-          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-          clip-rule="evenodd"
+                fill-rule="evenodd"
+                d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                clip-rule="evenodd"
         />
-      </symbol>
+    </symbol>
 
-      <symbol
-        id="briefcase"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        class="w-6 h-6"
-      >
+    <symbol
+            id="briefcase"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+    >
         <path
-          fill-rule="evenodd"
-          d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
-          clip-rule="evenodd"
+                fill-rule="evenodd"
+                d="M7.5 5.25a3 3 0 0 1 3-3h3a3 3 0 0 1 3 3v.205c.933.085 1.857.197 2.774.334 1.454.218 2.476 1.483 2.476 2.917v3.033c0 1.211-.734 2.352-1.936 2.752A24.726 24.726 0 0 1 12 15.75c-2.73 0-5.357-.442-7.814-1.259-1.202-.4-1.936-1.541-1.936-2.752V8.706c0-1.434 1.022-2.7 2.476-2.917A48.814 48.814 0 0 1 7.5 5.455V5.25Zm7.5 0v.09a49.488 49.488 0 0 0-6 0v-.09a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5Zm-3 8.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z"
+                clip-rule="evenodd"
         />
         <path
-          d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z"
+                d="M3 18.4v-2.796a4.3 4.3 0 0 0 .713.31A26.226 26.226 0 0 0 12 17.25c2.892 0 5.68-.468 8.287-1.335.252-.084.49-.189.713-.311V18.4c0 1.452-1.047 2.728-2.523 2.923-2.12.282-4.282.427-6.477.427a49.19 49.19 0 0 1-6.477-.427C4.047 21.128 3 19.852 3 18.4Z"
         />
-      </symbol>
-      <symbol
-        id="profile"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-6 h-6"
-      >
+    </symbol>
+    <symbol
+            id="profile"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+    >
         <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
         />
-      </symbol>
-    </svg>
+    </symbol>
+    <symbol
+            id="home"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M9.02 2.83992L3.63 7.03992C2.73 7.73992 2 9.22992 2 10.3599V17.7699C2 20.0899 3.89 21.9899 6.21 21.9899H17.79C20.11 21.9899 22 20.0899 22 17.7799V10.4999C22 9.28992 21.19 7.73992 20.2 7.04992L14.02 2.71992C12.62 1.73992 10.37 1.78992 9.02 2.83992Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M12 17.99V14.99"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+    <symbol
+            id="print"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M7.25 7H16.75V5C16.75 3 16 2 13.75 2H10.25C8 2 7.25 3 7.25 5V7Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M16 15V19C16 21 15 22 13 22H11C9 22 8 21 8 19V15H16Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M21 10V15C21 17 20 18 18 18H16V15H8V18H6C4 18 3 17 3 15V10C3 8 4 7 6 7H18C20 7 21 8 21 10Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M17 15H15.79H7"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M7 11H10"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+    <symbol
+            id="truck"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M15.0098 2V12C15.0098 13.1 14.1098 14 13.0098 14H2.00977V6C2.00977 3.79 3.79977 2 6.00977 2H15.0098Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M22.0098 14V17C22.0098 18.66 20.6698 20 19.0098 20H18.0098C18.0098 18.9 17.1098 18 16.0098 18C14.9098 18 14.0098 18.9 14.0098 20H10.0098C10.0098 18.9 9.10977 18 8.00977 18C6.90977 18 6.00977 18.9 6.00977 20H5.00977C3.34977 20 2.00977 18.66 2.00977 17V14H13.0098C14.1098 14 15.0098 13.1 15.0098 12V5H16.8498C17.5698 5 18.2298 5.39001 18.5898 6.01001L20.2998 9H19.0098C18.4598 9 18.0098 9.45 18.0098 10V13C18.0098 13.55 18.4598 14 19.0098 14H22.0098Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M8.00977 22C9.11434 22 10.0098 21.1046 10.0098 20C10.0098 18.8954 9.11434 18 8.00977 18C6.9052 18 6.00977 18.8954 6.00977 20C6.00977 21.1046 6.9052 22 8.00977 22Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M16.0098 22C17.1143 22 18.0098 21.1046 18.0098 20C18.0098 18.8954 17.1143 18 16.0098 18C14.9052 18 14.0098 18.8954 14.0098 20C14.0098 21.1046 14.9052 22 16.0098 22Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M22.0098 12V14H19.0098C18.4598 14 18.0098 13.55 18.0098 13V10C18.0098 9.45 18.4598 9 19.0098 9H20.2998L22.0098 12Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+    <symbol
+            id="gas"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M3.50098 22V5C3.50098 3 4.84098 2 6.50098 2H14.501C16.161 2 17.501 3 17.501 5V22H3.50098Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M2.00098 22H19.001"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M8.39098 10H12.621C13.661 10 14.511 9.5 14.511 8.11V6.88C14.511 5.49 13.661 4.99001 12.621 4.99001H8.39098C7.35098 4.99001 6.50098 5.49 6.50098 6.88V8.11C6.50098 9.5 7.35098 10 8.39098 10Z"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M6.50098 13H9.50098"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M17.501 16.01L22.001 16V10L20.001 9"
+                stroke="#171717"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+    <symbol
+            id="arrow-bottom"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M17.92 8.18005H11.69H6.07999C5.11999 8.18005 4.63999 9.34005 5.31999 10.0201L10.5 15.2001C11.33 16.0301 12.68 16.0301 13.51 15.2001L15.48 13.2301L18.69 10.0201C19.36 9.34005 18.88 8.18005 17.92 8.18005Z"
+                fill="#171717"
+        />
+    </symbol>
+    <symbol
+            id="user"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+    >
+        <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
+        />
+    </symbol>
+    <symbol
+            id="exit"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+                d="M9.32001 11.6801L11.88 14.2401L14.44 11.6801"
 
-    <!-- --------------------------- -->
-    <nav class="w-full flex items-center h-20 shadow-sm">
-      <div class="mx-28 w-full flex justify-between">
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M11.88 4V14.17"
+
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+        <path
+                d="M20 12.1801C20 16.6001 17 20.1801 12 20.1801C7 20.1801 4 16.6001 4 12.1801"
+
+                stroke-width="1.5"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+        />
+    </symbol>
+</svg>
+
+<!-- --------------------------- -->
+<nav class="w-full flex items-center h-20 shadow-sm">
+    <div class="mx-28 w-full flex justify-between">
         <div class="flex items-center gap-x-5">
-          <div class="border-l pl-5">
-            <img src="../../../templates/src/assets/logo.png" alt="" />
-          </div>
-          <div>
-            <span>دسته بندی ها</span>
-          </div>
+            <div class="border-l pl-5">
+                <img src="../src/assets/logo.png" alt=""/>
+            </div>
+            <div class="group flex items-center">
+                <a href="{% url 'homepage' %}" class="relative cursor-pointer">دسته بندی ها</a>
+                <svg class="w-4 h-4">
+                    <use href="#arrow-bottom"></use>
+                </svg>
+                <div
+                        class="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute top-16 transition-all delay-75"
+                >
+                    <ul
+                            class="bg-white font-DanaFaNumRegular px-4 py-5 rounded-md shadow-md space-y-3 border"
+                    >
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4">
+                                <use href="#truck"></use>
+                            </svg>
+                            <a class="mr-3" href="#"> وسایل نقلیه و قطعات وابسته </a>
+                        </li>
+                        <li class="flex items-cente">
+                            <svg class="w-4 h-4">
+                                <use href="#print"></use>
+                            </svg>
+                            <a class="mr-3" href="#"> فناوری اطلاعات و خدمات آی تی</a>
+                        </li>
+                        <li class="flex items-cente">
+                            <svg class="w-4 h-4">
+                                <use href="#gas"></use>
+                            </svg>
+                            <a class="mr-3" href="#"> نفت و گاز و پتروشیمی</a>
+                        </li>
+                        <li class="flex items-cente">
+                            <svg class="w-4 h-4">
+                                <use href="#print"></use>
+                            </svg>
+                            <a class="mr-3" href="#"> فناوری اطلاعات و خدمات آی تی</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="flex items-center gap-x-2">
-          <div>
-            <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >امــروز : 1403/01/15</a
-            >
-          </div>
-          <div>
-            <a
-              href="../../../templates/dist/post.html"
-              class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >مجله</a
-            >
-          </div>
-          <div>
-            <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
-              >تعرفه و خرید اشتراک</a
-            >
-          </div>
-          <div>
-            <a href="../../../templates/dist/Login.html" class="bg-black w-10 h-8">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-10 h-8 px-2 rounded-lg bg-black text-white"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
-                />
-              </svg>
-            </a>
-          </div>
+            <div>
+                <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
+                >امــروز : {{ jalali_now }}</a
+                >
+            </div>
+            <div>
+                <a
+                        href="../dist/post.html"
+                        class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
+                >مجله</a
+                >
+            </div>
+            <div>
+                <a href="" class="px-3 py-1 bg-gray-200 text-teal-950/80 rounded-lg"
+                >تعرفه و خرید اشتراک</a
+                >
+            </div>
+            {% if user.is_authenticated %}
+                <div class="group">
+                    <a class="bg-black w-10 h-8 relative">
+                        <svg class="w-10 h-8 px-2 rounded-lg bg-black text-white">
+                            <use href="#user"></use>
+                        </svg>
+                    </a>
+                    <div
+                            class="bg-white w-52 absolute cursor-pointer px-3 py-4 top-16 left-28 space-y-3 rounded-md shadow-md invisible opacity-0 group-hover:visible group-hover:opacity-100 delay-75"
+                    >
+                        <a href="{% url 'profile' %}" class="flex items-center">
+                            <svg class="w-4 h-4">
+                                <use href="#user"></use>
+                            </svg>
+                            <span class="pr-2">ورود به پنل</span>
+                        </a>
+                        <a href="{% url 'logout' %}" class="flex items-center text-red-500">
+                            <svg class="w-4 h-4 rotate-90">
+                                <use href="#exit"></use>
+                            </svg>
+                            <span class="pr-2">خروج از حساب کاربری</span>
+                        </a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="group">
+                    <a href="{% url 'login' %}" class="bg-black w-10 h-8 relative">
+                        <svg class="w-10 h-8 px-2 rounded-lg bg-black text-white">
+                            <use href="#user"></use>
+                        </svg>
+                    </a>
+
+                </div>
+
+            {% endif %}
         </div>
-      </div>
-    </nav>
-    <section>
+    </div>
+</nav>
+<section>
     {% block index %}
     {% endblock %}
 
-    </section>
-  </body>
+
+
+
+    <script src="{% static 'jalali.js' %}"></script>
+    <script src="{% static 'jquery.js' %}"></script>
+
+
+    <!-- Your custom JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all elements with the class 'gregorian-date'
+            var elements = document.querySelectorAll('.gregorian-date');
+
+            // Iterate over each element
+            elements.forEach(function (element) {
+                // Get the Gregorian date from the element's text content
+                var gregorianDate = element.textContent.trim();
+
+                // Convert the Gregorian date to Jalali date
+                var jalaliDate = moment(gregorianDate, 'YYYY-MM-DD').locale('fa').format('YYYY/MM/DD');
+
+                // Replace the Gregorian date with the Jalali date in the element
+                element.textContent = jalaliDate;
+            });
+        });
+    </script>
+
+</section>
+</body>
 </html>

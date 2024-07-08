@@ -1,22 +1,13 @@
-# models.py in your custom user app
-
 from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-
+from django.utils import timezone
 from django.conf import settings
-
-
-class ProductOrService(models.Model):
-    # Other fields of your model
-
-    # Define a ForeignKey field referencing the custom user model
-    auctioneer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
 
 class CustomUserManager(BaseUserManager):
     """
-    Custom user manager where email is the unique identifiers
+    Custom user manager where email is the unique identifier
     for authentication instead of usernames.
     """
 
@@ -32,7 +23,7 @@ class CustomUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, email, password, **extra_fields):
+    def create_superuser(self, email, password=None, **extra_fields):
         """
         Create and return a superuser with an email and password.
         """
@@ -47,25 +38,48 @@ class CustomUserManager(BaseUserManager):
         return self.create_user(email, password, **extra_fields)
 
 
-class CustomUser(AbstractUser):
+class CustomUser(AbstractUser, PermissionsMixin):
     """
     Custom user model with additional fields.
     """
-    first_name = models.CharField(max_length=60)
-    last_name = models.CharField(max_length=60)
+    name = models.CharField(max_length=60, unique=True)
     email = models.EmailField(_('email address'), unique=True)
-    age = models.PositiveIntegerField(blank=True, null=True)
     phone = models.CharField(max_length=11)
-    profile_pic = models.ImageField(upload_to='avatar/', blank=True, null=True)
+    profile_pic = models.ImageField(upload_to='avatar', blank=True, null=True)
+    date_joined = models.DateTimeField(default=timezone.now)
 
-    # Add your custom fields here
-    # Example:
-    # age = models.PositiveIntegerField(_('age'), null=True, blank=True)
-
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    USERNAME_FIELD = 'username'
+    EMAIL_FIELD = 'email'
+    REQUIRED_FIELDS = ['email']
 
     objects = CustomUserManager()
 
     def __str__(self):
         return self.email
+
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='customuser_groups',
+        blank=True,
+        help_text=_(
+            'The groups this user belongs to. A user will get all permissions '
+            'granted to each of their groups.'
+        ),
+        verbose_name=_('groups'),
+    )
+
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='customuser_user_permissions',
+        blank=True,
+        help_text=_('Specific permissions for this user.'),
+        verbose_name=_('user permissions'),
+    )
+
+
+class Documents(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    document = models.FileField(upload_to='documents/')
+    date_from=models.DateField()
+    date_to=models.DateField()
+    is_active=models.BooleanField(default=False)

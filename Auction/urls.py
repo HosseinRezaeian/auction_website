@@ -16,9 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.views.i18n import JavaScriptCatalog
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('auction/', include('products.urls')),
-]
+                  path('admin/', admin.site.urls),
+                  path('', include('home.urls')),
+                  path('auction/', include('products.urls')),
+                  path('accounts/', include('usermodel.urls')),
+                  path('aj/', include('auctions_product.urls')),
+                  path('ja-catalog', JavaScriptCatalog.as_view(), name='jscatalog'),
+
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

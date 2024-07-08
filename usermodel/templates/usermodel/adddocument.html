@@ -1,0 +1,47 @@
+{% extends 'usermodel/baseprofile.html' %}
+{% load static %}
+
+{% block index %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".form-btn").click(function () {
+                $(".form-add").toggle();
+            });
+        });
+    </script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+        <title>اضافه کردن سفته</title>
+
+    </head>
+    <body>
+    <button class="form-btn"
+            class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+        اضافه کردن سفته
+    </button>
+    <div class="form-ad">
+        <div class="mb-10 flex justify-center font-DanaFaNumBold text-2xl">
+            <h1>اضافه کردن سفته</h1>
+        </div>
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+            <form method="POST" enctype="multipart/form-data" class="mx-auto mt-16 max-w-xl sm:mt-20">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="mt-2 sm:col-span-2">
+                    <button type="submit"
+                            class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                        ارسال
+                    </button>
+                </div>
+            </form>
+        </div>
+        <script src="{% url 'jscatalog' %}"></script>
+        {{ form.media }}
+        <script src="{% static 'admin/js/core.js' %}"></script>
+    </div>
+    </body>
+    </html>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{% static "src/output.css" %}"/>
+    <title>Document</title>
+</head>
+<body dir="rtl">
+<div class=" w-full h-screen flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center gap-y-5 w-72 h-96 bg-green-300 shadow-md">
+        <h3 class="pb-5 text-xl">به حساب خود وارد شوید</h3>
+        <form method="POST">
+
+            {% for field in form %}
+
+                <div class="flex flex-col items-start">
+                    <span> {{ field.label_tag }} </span>
+                    {{ field }}
+                </div>
+
+            {% endfor %}
+            {% csrf_token %}
+
+            <div>
+{#                <a href="#" class="px-[5.5rem] py-1 bg-blue-600 text-white rounded-md">ورود </a>#}
+                <button class="px-[5.5rem] py-1 bg-blue-600 text-white rounded-md" type="submit">ورود</button>
+            </div>
+        </form>
+        <div class="font-DanaFaNumRegular">
+            <span>حساب ندارید؟ <a href="{% url 'singup' %}" class="text-blue-600">ثبت نام کنید</a></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'usermodel/baseprofile.html' %}
+
+{% block index %}
+    <div class="bg-gray-200 rounded-2xl text-sm shadow-sm h-[235px]">
+        <div class="flex flex-col p-6 w-full justify-between">
+            <div class="flex justify-between">
+                <div class="flex justify-between gap-x-5">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4">
+                            <use href="#user"></use>
+                        </svg>
+                        <span class="pr-2">{{ user.name }} </span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4">
+                            <use href="#phone"></use>
+                        </svg>
+                        <span class="pr-2">{{ user.phone }}</span>
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4">
+                            <use href="#at-symbol"></use>
+                        </svg>
+                        <span class="pr-2">{{ user.email }} </span>
+                    </div>
+                </div>
+                <div>
+               <a href="{% url 'logout' %}"><span class="bg-red-500 text-white px-3 py-1 rounded-2xl shadow-sm">خروج از اشتراک</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
